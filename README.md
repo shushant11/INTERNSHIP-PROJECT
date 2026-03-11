@@ -1,30 +1,31 @@
 
 # AI-Based Solar Panel Predictive Maintenance System
 
-## Project Overview
+## Overview
 
-This project implements a **Machine Learning model to predict maintenance requirements for solar panels** based on operational and environmental data.
+This project implements a **Machine Learning system that predicts whether a solar panel requires maintenance** using operational and environmental data.
 
-Solar power systems can experience performance degradation due to factors such as dust accumulation, temperature fluctuations, and equipment wear. Predictive maintenance helps detect potential issues before failure occurs.
+Solar panels can experience efficiency loss due to factors such as dust accumulation, temperature variations, and electrical irregularities. This project uses machine learning to analyze these factors and predict maintenance needs.
 
-This project demonstrates how **machine learning can be applied to renewable energy systems to improve efficiency and reduce downtime.**
+The goal is to demonstrate how **AI can improve reliability and efficiency in renewable energy systems**.
 
 ---
 
 ## Problem Statement
 
-Solar panels require periodic maintenance to maintain optimal efficiency. Traditional maintenance methods are reactive and performed after performance drops.
+Solar power systems require regular maintenance to maintain optimal energy output. Traditional maintenance approaches are reactive and often performed only after system performance declines.
 
-The objective of this project is to develop a **predictive maintenance model** that can determine whether a solar panel requires maintenance based on sensor and environmental data.
+This project proposes a **predictive maintenance model** that analyzes solar panel operational data to determine whether maintenance is required.
 
 ---
 
 ## Dataset
 
 Dataset used:
+
 solar_maintenance_data.csv
 
-The dataset contains operational parameters of solar panels.
+The dataset includes several parameters affecting solar panel performance.
 
 ### Features
 
@@ -37,7 +38,7 @@ Dust Level
 
 ### Target Variable
 
-Maintenance Required (Yes / No)
+Maintenance Required
 
 ---
 
@@ -47,7 +48,7 @@ Python
 Pandas
 NumPy
 Scikit-Learn
-Matplotlib
+Streamlit
 Machine Learning
 
 ---
@@ -58,15 +59,15 @@ The model used in this project is:
 
 Random Forest Classifier
 
-Random Forest is chosen because it provides:
+Random Forest was selected because it:
 
-• High accuracy
-• Robustness to noise
-• Ability to handle nonlinear relationships
+• Handles nonlinear relationships well
+• Works efficiently on tabular datasets
+• Provides high predictive accuracy
 
 ---
 
-## Machine Learning Workflow
+## Project Workflow
 
 Dataset
 ↓
@@ -74,24 +75,23 @@ Data Preprocessing
 ↓
 Feature Selection
 ↓
-Train-Test Split
+Train/Test Split
 ↓
 Model Training
 ↓
 Model Evaluation
 ↓
-Model Saving
+Model Deployment
 
 ---
 
-## Model Performance
+## Web Application
 
-Accuracy achieved: ~85% – 90% depending on dataset split.
+A Streamlit web application is implemented to allow users to input solar panel parameters and predict whether maintenance is required.
 
-Evaluation metrics used:
+Run the application using:
 
-Accuracy Score
-Confusion Matrix
+streamlit run app.py
 
 ---
 
@@ -103,18 +103,22 @@ git clone https://github.com/shushant11/INTERNSHIP-PROJECT
 
 Install dependencies:
 
-pip install pandas numpy scikit-learn
+pip install pandas numpy scikit-learn streamlit
 
-Run the program:
+Run the ML model:
 
 python spower.py
+
+Run the web application:
+
+streamlit run app.py
 
 ---
 
 ## Applications
 
 Solar Power Plants
-Renewable Energy Monitoring Systems
+Renewable Energy Monitoring
 Predictive Maintenance Systems
 Energy Efficiency Optimization
 
@@ -122,10 +126,10 @@ Energy Efficiency Optimization
 
 ## Future Improvements
 
-• Add real-time IoT sensor data integration
-• Build a web interface using Streamlit
-• Compare multiple machine learning models
-• Deploy the model as an API
+• Real-time IoT sensor integration
+• Multiple model comparison
+• Deployment to cloud platforms
+• Dashboard visualization
 
 ---
 
